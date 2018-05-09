@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
-import { StyleSheet, View } from 'react-native'
-
-import Home from './Home'
+import { StyleSheet, Text, View } from 'react-native'
 
 export default class App extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Home welcome='This is the home component'/>
+        <Text> {this.props.welcome} </Text>
       </View>
     )
   }
