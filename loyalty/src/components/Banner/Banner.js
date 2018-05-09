@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
-export default class Home extends Component {
+export default class Banner extends Component {
   render () {
     return (
-      <View style={styles.container}>
-        <Text> {this.props.welcome} </Text>
+      <View style={styles.Container}>
+        <Text> This is a banner </Text>
       </View>
     )
   }

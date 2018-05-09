@@ -1,14 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
+import { StyleSheet, View, Text } from 'react-native'
 
-import { StyleSheet, View } from 'react-native'
-
-import Banner from './src/components/Banner'
-
-export default class App extends React.Component {
+export default class HomeScreen extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Banner />
+        <Text> This is the home screen </Text>
       </View>
     )
   }
