@@ -1,9 +1,9 @@
 import React from 'react'
 import App from './App'
 
-import renderer from 'react-test-renderer'
+const ReactTestRenderer = require('react-test-renderer')
 
 it('renders without crashing', () => {
-  const rendered = renderer.create(<App />).toJSON()
+  const rendered = ReactTestRenderer.create(<App />).toJSON()
   expect(rendered).toBeTruthy()
 })
