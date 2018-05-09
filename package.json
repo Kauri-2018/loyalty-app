@@ -1,0 +1,11 @@
+{
+  "name": "loyalty-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kauri-2018/loyalty-app.git",
+  "author": "Zoe Lisk <zoe.lisk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "node": "^10.0.0"
+  }
+}
