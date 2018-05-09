@@ -1,1 +1,6 @@
-# loyalty-app
+# Loyalty (app)
+
+## Pages
+
+## API Routes
+
