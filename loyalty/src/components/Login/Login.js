@@ -9,7 +9,7 @@ const User = t.struct({
   password: t.String
 })
 
-export default class Login extends Component {
+export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
