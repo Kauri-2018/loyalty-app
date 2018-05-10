@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Image } from 'react-native'
 
 export default class Banner extends Component {
   render () {
     return (
       <View style={styles.Container}>
-        <Text> This is a banner </Text>
+        <Image
+          style={{width: 350, height: 150}}
+          source={{uri: 'http://via.placeholder.com/350x150'}} >
+        </Image>
       </View>
     )
   }
