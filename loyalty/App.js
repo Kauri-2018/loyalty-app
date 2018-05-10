@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 
 import Banner from './src/components/Banner'
 import Footer from './src/components/Footer'
@@ -10,7 +10,7 @@ import Login from './src/components/Login'
 export default class App extends React.Component {
   render () {
     return (
-      <View style={styles.container}>
+      <View >
         <Logo />
         <Banner />
         <Login />
@@ -20,11 +20,11 @@ export default class App extends React.Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center'
+//   }
+// })
