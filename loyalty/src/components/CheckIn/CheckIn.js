@@ -7,7 +7,7 @@ export default class CheckIn extends React.Component {
           <View style={styles.container}>
            <Button
              title="Check in"
-             onPress={this.handleSubmit}
+             onPress={this.openCamera}
              />
           </ View>
         )
