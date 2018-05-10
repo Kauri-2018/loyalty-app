@@ -4,6 +4,7 @@ import { View, Button, StyleSheet } from 'react-native'
 export default class ProfileNav extends React.Component {
     render() {
         return (
+          <View>
           <Button
           title="My Account"
           onPress={this.loadAccount}
@@ -16,6 +17,7 @@ export default class ProfileNav extends React.Component {
           title="Logout"
           onPress={this.logout}
           />
+          </ View>
         )
     }
 }
