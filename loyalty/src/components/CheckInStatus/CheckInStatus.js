@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-export default class Login extends Component {
+export default class CheckInStatus extends Component {
   render () {
     return (
       <View style={styles.container}>
