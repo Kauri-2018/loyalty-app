@@ -21,7 +21,7 @@ export default class ProfileScreen extends React.Component {
         <ProfileImg />
         <CheckIn />
         <VisitCounter />
-        <ProfileNav />
+        <ProfileNav navigation={this.props.navigation}/>
         <Footer />
       </ ScrollView>
     )
