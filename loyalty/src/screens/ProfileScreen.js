@@ -24,7 +24,7 @@
 
 import React from 'react'
 
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
@@ -39,7 +39,7 @@ import ProfileNav from '../components/ProfileNav'
 export default class App2 extends React.Component {
   render() {
     return (
-      <View>
+      <ScrollView>
         <Logo />
         <Banner />
         <Greeting />
@@ -48,7 +48,7 @@ export default class App2 extends React.Component {
         <VisitCounter />
         <ProfileNav />
         <Footer />
-      </View>
+      </ ScrollView>
     )
   }
 }

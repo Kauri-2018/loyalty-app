@@ -21,25 +21,26 @@
 // }
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native'
+import { ScrollView, Text, StyleSheet } from 'react-native'
 import { createStackNavigator } from 'react-navigation'
 
+import HomeScreen from './src/screens/HomeScreen.js'
 import ProfileScreen from './src/screens/ProfileScreen.js'
 
-export default class App extends React.Component {
+
+class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <ProfileScreen />
-      </View>
+      <ScrollView style={styles.container}>
+        <HomeScreen />
+      </ScrollView>
     )
   }
 }
 
 module.exports = createStackNavigator({
-  Profile: {
-    screen: ProfileScreen
-  },
+  Home: { screen: HomeScreen },
+  Profile: { screen: ProfileScreen }
 })
 
 const styles = StyleSheet.create ({ 
