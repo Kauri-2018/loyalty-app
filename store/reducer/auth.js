@@ -6,7 +6,7 @@ const initState = {
   isFetching: false,
   isAuthenticated: false,
   errorMessage: '',
-  user: 'wow'
+  user: 'loyalty team'
 }
 
 export default function (state = initState, action) {
