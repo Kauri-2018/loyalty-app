@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
 import { View, Button, StyleSheet } from 'react-native'
 
-export default class CheckIn extends React.Component {
-    render() {
-        return (
-          <View style={styles.container}>
-           <Button
-             title="Check in"
-             onPress={this.openCamera}
-             />
-          </ View>
-        )
-    }
+import t from 'tcomb-form-native'
+
+const Form = t.form.Form
+
+const CheckInForm = t.struct({
+  username: t.String,
+  password: t.String
+})
+
+export default class CheckIn extends Component {
+  render () {
+    return (
+      <View style={styles.container}>
+        <Form type={CheckInForm} />
+        <Button
+          title="Check in"
+          onPress={this.editWelcome}
+        />
+      </ View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({
@@ -19,6 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 50,
     padding: 20,
-    backgroundColor: '#ffffff',
-  },
+    backgroundColor: '#ffffff'
+  }
 })
