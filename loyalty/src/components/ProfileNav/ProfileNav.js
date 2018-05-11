@@ -1,32 +1,23 @@
 import React, {Component} from 'react'
-import { View, Button, StyleSheet } from 'react-native'
+import { View, Button } from 'react-native'
 
-export default class ProfileNav extends React.Component {
-    render() {
-        return (
-          <View>
-          <Button
+export default class ProfileNav extends Component {
+  render () {
+    return (
+      <View>
+        <Button
           title="My Account"
           onPress={this.loadAccount}
-          />
-          <Button
+        />
+        <Button
           title="Visit History"
           onPress={this.loadHistory}
-          />
-          <Button
+        />
+        <Button
           title="Logout"
-          onPress={this.logout}
-          />
-          </ View>
-        )
-    }
+          onPress={() => this.props.navigation.navigate('Home')}
+        />
+      </ View>
+    )
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff',
-  },
-})
