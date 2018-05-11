@@ -1,10 +1,10 @@
 # Loyalty (app)
 
 ## Pages
-[x] Home (Login)
-[x] Profile
-[ ] Your Account
-[ ] History
+- Home (Login)
+- Profile
+- Your Account
+- History
 
 ## File Structure
 
