@@ -1,23 +1,29 @@
-import React, {Component} from 'react'
-import { StyleSheet, View } from 'react-native'
+import React from 'react'
 
-import App2 from '../App2.js'
+import { ScrollView } from 'react-native'
 
-export default class ProfileScreen extends Component {
+import Banner from '../components/Banner'
+import Footer from '../components/Footer'
+import Logo from '../components/Logo'
+import Greeting from '../components/Greeting'
+import ProfileImg from '../components/ProfileImg'
+import CheckIn from '../components/CheckIn'
+import VisitCounter from '../components/VisitCounter'
+import ProfileNav from '../components/ProfileNav'
+
+export default class ProfileScreen extends React.Component {
   render () {
     return (
-      <View style={styles.container}>
-        <App2 />
-      </View>
+      <ScrollView>
+        <Logo />
+        <Banner />
+        <Greeting />
+        <ProfileImg />
+        <CheckIn />
+        <VisitCounter />
+        <ProfileNav />
+        <Footer />
+      </ ScrollView>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})

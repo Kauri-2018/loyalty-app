@@ -1,21 +1,21 @@
 import React from 'react'
+import { createStackNavigator } from 'react-navigation'
 
-import { View } from 'react-native'
-
-import Banner from './src/components/Banner'
-import Footer from './src/components/Footer'
-import Logo from './src/components/Logo'
-import Login from './src/components/Login'
+import HomeScreen from './src/screens/HomeScreen.js'
+import ProfileScreen from './src/screens/ProfileScreen.js'
 
 export default class App extends React.Component {
   render () {
-    return (
-      <View >
-        <Logo />
-        <Banner />
-        <Login />
-        <Footer />
-      </View>
-    )
+    return <RootStack />
   }
 }
+
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Profile: ProfileScreen
+  },
+  {
+    initialRouteName: 'Home'
+  }
+)

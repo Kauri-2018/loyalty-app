@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import { View, TextInput, Text, Button, StyleSheet } from 'react-native'
+import { View, Button, StyleSheet } from 'react-native'
+
 import t from 'tcomb-form-native'
 
 const Form = t.form.Form
@@ -9,14 +10,14 @@ const User = t.struct({
   password: t.String
 })
 
-export default class Login extends React.Component {
-  render() {
+export default class Login extends Component {
+  render () {
     return (
       <View style={styles.container}>
-       <Form type={User} />
-       <Button
+        <Form type={User} />
+        <Button
           title="Log in"
-          onPress={this.handleSubmit}
+          onPress={() => this.props.navigation.navigate('Profile')}
         />
       </ View>
     )
@@ -28,6 +29,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 50,
     padding: 20,
-    backgroundColor: '#ffffff',
-  },
+    backgroundColor: '#ffffff'
+  }
 })

@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import { Stylesheet, View } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
 export default class VisitCounter extends Component {
     render () {
         return (
-          <View style={style.container}>
+          <View style={styles.container}>
           <Text>You have been here 24 times this year!</ Text>
           <Text>Your membership expires on 31/12/2019</ Text>
           </ View>
