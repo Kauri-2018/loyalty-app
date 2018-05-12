@@ -6,6 +6,7 @@ import {LOGOUT} from '../actions/logout'
 const initState = {
   isFetching: false,
   isAuthenticated: false,
+  isCheckedin: false,
   errorMessage: '',
   user: null
 }

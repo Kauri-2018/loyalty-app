@@ -2,6 +2,8 @@ import React from 'react'
 
 import {ScrollView} from 'react-native'
 
+import {connect} from 'react-redux'
+
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
 import Logo from '../components/Logo'
@@ -11,19 +13,28 @@ import CheckIn from '../components/CheckIn'
 import VisitCounter from '../components/VisitCounter'
 import ProfileNav from '../components/ProfileNav'
 
-export default class ProfileScreen extends React.Component {
+class ProfileScreen extends React.Component {
   render () {
+    const isCheckedin = this.props.isCheckedin || false
     return (
       <ScrollView>
         <Logo />
         <Banner />
         <Greeting />
         <ProfileImg />
-        <CheckIn />
-        <VisitCounter />
+        {!isCheckedin && <CheckIn />}
+        {isCheckedin && <VisitCounter />}
         <ProfileNav navigation={this.props.navigation}/>
         <Footer />
-      </ ScrollView>
+      </ScrollView>
     )
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    isCheckedin: state.auth.isCheckedin
+  }
+}
+
+export default connect(mapStateToProps)(ProfileScreen)
