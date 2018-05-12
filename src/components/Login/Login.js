@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {View, Button, StyleSheet} from 'react-native'
 import {connect} from 'react-redux'
-
 import t from 'tcomb-form-native'
+
 import {userAppLogin} from '../../store/actions/login'
 
 const Form = t.form.Form
