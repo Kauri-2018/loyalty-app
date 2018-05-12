@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-// import { ScrollView } from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
@@ -11,12 +11,19 @@ import Login from '../components/Login'
 export default class HomeScreen extends Component {
   render () {
     return (
-      <View >
+      <ScrollView>
+      <KeyboardAwareScrollView
+      enableOnAndroid
+      resetScrollToCoords={{ x: 0, y: 0 }}
+      contentContainerStyle={styles.container}
+      scrollEnabled={false}
+      >
         <Logo />
         <Banner />
         <Login navigation={this.props.navigation} />
         <Footer />
-      </View>
+      </KeyboardAwareScrollView>
+      </ScrollView>
     )
   }
 }
