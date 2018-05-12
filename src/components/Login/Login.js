@@ -22,7 +22,7 @@ class Login extends React.Component {
     const {username, password} = this.refs.form.getValue()
     if (username && password) {
       this.props.login({username, password})
-        // .then(() => this.props.navigation.navigate('Profile'))
+        .then(() => this.props.navigation.navigate('Profile'))
     }
   }
   render () {
