@@ -1,25 +1,34 @@
-import React, { Component } from 'react'
-import { View, Button, StyleSheet } from 'react-native'
+import React, {Component} from 'react'
+import {View, Button, StyleSheet} from 'react-native'
 
 import t from 'tcomb-form-native'
 
 const Form = t.form.Form
 
 const CheckInForm = t.struct({
-  username: t.String,
-  password: t.String
+  code: t.String
 })
 
 export default class CheckIn extends Component {
+  constructor (props) {
+    super(props)
+    this.handleCheckin = this.handleCheckin.bind(this)
+  }
+
+  handleCheckin () {
+    const {code} = this.refs.form.getValue()
+    console.log(code)
+  }
+
   render () {
     return (
       <View style={styles.container}>
-        <Form type={CheckInForm} />
+        <Form type={CheckInForm} ref="form" />
         <Button
           title="Check in"
-          onPress={this.editWelcome}
+          onPress={this.handleCheckin}
         />
-      </ View>
+      </View>
     )
   }
 }
