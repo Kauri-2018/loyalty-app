@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ScrollView } from 'react-native'
+import {ScrollView} from 'react-native'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'

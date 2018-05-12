@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {StyleSheet, View, Text} from 'react-native'
 import {connect} from 'react-redux'
 
-class Greeting extends React.Component {
+class Greeting extends Component {
   render () {
     return (
       <View style={styles.container}>

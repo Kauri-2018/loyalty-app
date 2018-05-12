@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { View, Button } from 'react-native'
+import {View, Button} from 'react-native'
 
 export default class ProfileNav extends Component {
   render () {
