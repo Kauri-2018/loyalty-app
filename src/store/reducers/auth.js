@@ -1,5 +1,5 @@
 import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from '../actions/login'
-// import {LOGOUT} from '../actions/logout'
+import {LOGOUT} from '../actions/logout'
 // import {UPDATE_USER} from '../actions/index'
 
 const initState = {
@@ -30,11 +30,11 @@ export default function (state = initState, action) {
         isAuthenticated: false,
         errorMessage: action.message
       }
-    // case LOGOUT:
-    //   return {
-    //     isAuthenticated: false,
-    //     user: null
-    //   }
+    case LOGOUT:
+      return {
+        isAuthenticated: false,
+        user: null
+      }
     // case UPDATE_USER:
     //   return {
     //     ...state,
