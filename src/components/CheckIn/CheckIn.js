@@ -8,18 +8,27 @@ import {userAppCheckin} from '../../store/actions/checkin'
 const Form = t.form.Form
 
 const CheckInForm = t.struct({
-  username: t.String,
-  password: t.String
+  code: t.String
 })
 
 class CheckIn extends Component {
+  constructor (props) {
+    super(props)
+    this.handleCheckin = this.handleCheckin.bind(this)
+  }
+
+  handleCheckin () {
+    const {code} = this.refs.form.getValue()
+    this.userCheckin(code)
+  }
+
   render () {
     return (
       <View style={styles.container}>
-        <Form type={CheckInForm} />
+        <Form type={CheckInForm} ref="form" />
         <Button
           title="Check in"
-          onPress={this.editWelcome}
+          onPress={this.handleCheckin}
         />
       </View>
     )
