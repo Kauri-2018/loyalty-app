@@ -5,7 +5,7 @@ import {createStore, applyMiddleware} from 'redux'
 import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'remote-redux-devtools'
 
-import reducers from './store/reducer'
+import reducers from './src/store/reducers'
 import HomeScreen from './src/screens/HomeScreen.js'
 import ProfileScreen from './src/screens/ProfileScreen.js'
 
