@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { View, Button, StyleSheet } from 'react-native'
-
+import React, {Component} from 'react'
+import {View, Button, StyleSheet} from 'react-native'
+import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
+
+import {userAppCheckin} from '../../store/actions/checkin'
 
 const Form = t.form.Form
 
@@ -10,7 +12,7 @@ const CheckInForm = t.struct({
   password: t.String
 })
 
-export default class CheckIn extends Component {
+class CheckIn extends Component {
   render () {
     return (
       <View style={styles.container}>
@@ -19,7 +21,7 @@ export default class CheckIn extends Component {
           title="Check in"
           onPress={this.editWelcome}
         />
-      </ View>
+      </View>
     )
   }
 }
@@ -32,3 +34,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff'
   }
 })
+
+const mapDispatchToProps = dispatch => {
+  return {
+    userCheckin: passcode => dispatch(userAppCheckin(passcode))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CheckIn)
