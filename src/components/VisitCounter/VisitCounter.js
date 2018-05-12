@@ -1,20 +1,15 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {StyleSheet, View, Text} from 'react-native'
 import {connect} from 'react-redux'
 
-class VisitCounter extends Component {
-  render () {
-    const {isCheckedin, count, user} = this.props
-    return (
-      {isCheckedin &&
-        <View style={styles.container}>
-          <Text> You have been here {count} times this year! </Text>
-          <Text> Your membership expires on {user.expiry_date} </Text>
-        </View>
-      }
-    )
-  }
-}
+const VisitCounter = ({isCheckedin, count, user}) => (
+  <View style={styles.container}>
+    {isCheckedin && [
+      <Text key="count"> You have been here {count} times this year! </Text>,
+      <Text key="expiry"> Your membership expires on {user.expiry_date} </Text>
+    ]}
+  </View>
+)
 
 const styles = StyleSheet.create({
   container: {

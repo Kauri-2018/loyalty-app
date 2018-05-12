@@ -19,7 +19,7 @@ class CheckIn extends Component {
 
   handleCheckin () {
     const {code} = this.refs.form.getValue()
-    this.userCheckin(code)
+    this.props.userCheckin(code)
   }
 
   render () {

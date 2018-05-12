@@ -56,7 +56,6 @@ export default function (state = initState, action) {
         isAuthenticated: false,
         user: null
       }
-    case 
     // case UPDATE_USER:
     //   return {
     //     ...state,
