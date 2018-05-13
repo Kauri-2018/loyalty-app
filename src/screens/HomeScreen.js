@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import { ScrollView } from 'react-native'
 
-import { View } from 'react-native'
+import { Content } from 'native-base'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
@@ -11,12 +11,12 @@ import Login from '../components/Login'
 export default class HomeScreen extends Component {
   render () {
     return (
-      <View >
+      <Content>
         <Logo />
         <Banner />
         <Login navigation={this.props.navigation} />
         <Footer />
-      </View>
+      </ Content>
     )
   }
 }

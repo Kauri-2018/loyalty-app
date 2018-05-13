@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {ScrollView} from 'react-native'
+import { Content } from 'native-base'
 
 import {connect} from 'react-redux'
 
@@ -17,7 +17,7 @@ class ProfileScreen extends React.Component {
   render () {
     const isCheckedin = this.props.isCheckedin || false
     return (
-      <ScrollView>
+      <Content>
         <Logo />
         <Banner />
         <Greeting />
@@ -26,7 +26,7 @@ class ProfileScreen extends React.Component {
         {isCheckedin && <VisitCounter />}
         <ProfileNav navigation={this.props.navigation}/>
         <Footer />
-      </ScrollView>
+      </ Content>
     )
   }
 }
