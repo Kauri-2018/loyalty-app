@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
   banner: {
-    width: 375,
+    width: 200,
     height: 150
   },
   container: {
