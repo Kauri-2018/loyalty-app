@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {View, Button, StyleSheet} from 'react-native'
-
+import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
+
+import {userAppCheckin} from '../../store/actions/checkin'
 
 const Form = t.form.Form
 
@@ -9,7 +11,7 @@ const CheckInForm = t.struct({
   code: t.String
 })
 
-export default class CheckIn extends Component {
+class CheckIn extends Component {
   constructor (props) {
     super(props)
     this.handleCheckin = this.handleCheckin.bind(this)
@@ -17,7 +19,7 @@ export default class CheckIn extends Component {
 
   handleCheckin () {
     const {code} = this.refs.form.getValue()
-    console.log(code)
+    this.props.userCheckin(code)
   }
 
   render () {
@@ -41,3 +43,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff'
   }
 })
+
+const mapDispatchToProps = dispatch => {
+  return {
+    userCheckin: passcode => dispatch(userAppCheckin(passcode))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CheckIn)

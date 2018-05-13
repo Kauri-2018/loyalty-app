@@ -1,16 +1,15 @@
-import React, {Component} from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import React from 'react'
+import {StyleSheet, View, Text} from 'react-native'
+import {connect} from 'react-redux'
 
-export default class VisitCounter extends Component {
-  render () {
-    return (
-      <View style={styles.container}>
-        <Text>You have been here 24 times this year!</ Text>
-        <Text>Your membership expires on 31/12/2019</ Text>
-      </ View>
-    )
-  }
-}
+const VisitCounter = ({isCheckedin, count, user}) => (
+  <View style={styles.container}>
+    {isCheckedin && [
+      <Text key="count"> You have been here {count} times this year! </Text>,
+      <Text key="expiry"> Your membership expires on {user.expiry_date} </Text>
+    ]}
+  </View>
+)
 
 const styles = StyleSheet.create({
   container: {
@@ -20,3 +19,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff'
   }
 })
+
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    isCheckedin: state.auth.isCheckedin,
+    count: state.auth.count,
+    user: state.auth.user
+  }
+}
+
+export default connect(mapStateToProps)(VisitCounter)
