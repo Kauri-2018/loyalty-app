@@ -1,13 +1,15 @@
 import React, {Component} from 'react'
 import { View, Image } from 'react-native'
 
+import styles from './styles'
+
 export default class Logo extends Component {
   render () {
     return (
-      <View >
+      <View>
         <Image
-          style={{width: 140, height: 100}}
-          source={{uri: 'http://via.placeholder.com/350x150'}} >
+          style={styles.logo}
+          source={require('./LogoLoyalty1.jpg')} >
         </Image>
       </View>
     )
