@@ -5,7 +5,9 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 65
+    paddingTop: 65,
+    display: 'flex',
+    flexDirection: 'row'
   },
   banner: {
     paddingTop: 20,
@@ -13,15 +15,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   logo: {
-    height: 400,
-    paddingVertical: 20,
-    marginTop: -60,
-    marginHorizontal: 40,
-    borderWidth: 3,
-    borderColor: 'black',
-    borderRadius: 15,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    flex: 1
   }
 })
