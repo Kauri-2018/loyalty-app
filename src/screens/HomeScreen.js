@@ -5,14 +5,14 @@ import { Content } from 'native-base'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
-import Logo from '../components/Logo'
+// import Logo from '../components/Logo'
 import Login from '../components/Login'
 
 export default class HomeScreen extends Component {
   render () {
     return (
       <Content>
-        <Logo />
+        {/* <Logo /> */}
         <Banner />
         <Login navigation={this.props.navigation} />
         <Footer />

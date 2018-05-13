@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
-import Logo from '../components/Logo'
+// import Logo from '../components/Logo'
 import Greeting from '../components/Greeting'
 import ProfileImg from '../components/ProfileImg'
 import CheckIn from '../components/CheckIn'
@@ -18,7 +18,7 @@ class ProfileScreen extends React.Component {
     const isCheckedin = this.props.isCheckedin || false
     return (
       <Content>
-        <Logo />
+        {/* <Logo /> */}
         <Banner />
         <Greeting />
         <ProfileImg />
