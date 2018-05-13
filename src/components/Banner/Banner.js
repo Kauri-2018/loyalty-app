@@ -1,24 +1,17 @@
 import React, {Component} from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { View, Image } from 'react-native'
+
+import styles from './styles'
 
 export default class Banner extends Component {
   render () {
     return (
-      <View style={styles.Container}>
+      <View style={styles.container}>
         <Image
-          style={{width: 350, height: 150}}
-          source={{uri: 'http://via.placeholder.com/350x150'}} >
+          style={styles.banner}
+          source={require('./banner2.jpg')} >
         </Image>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
