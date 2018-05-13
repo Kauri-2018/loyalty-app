@@ -8,7 +8,7 @@ import {userAppCheckin} from '../../store/actions/checkin'
 const Form = t.form.Form
 
 const CheckInForm = t.struct({
-  code: t.String
+  Passcode: t.String
 })
 
 class CheckIn extends Component {
@@ -18,8 +18,8 @@ class CheckIn extends Component {
   }
 
   handleCheckin () {
-    const {code} = this.refs.form.getValue()
-    this.props.userCheckin(code)
+    const {passcode} = this.refs.form.getValue()
+    this.props.userCheckin(passcode)
   }
 
   render () {
