@@ -1,24 +1,19 @@
 import React, {Component} from 'react'
-import { StyleSheet, View, Image } from 'react-native'
+import { ImageBackground, Image } from 'react-native'
+
+import styles from './styles'
 
 export default class Banner extends Component {
   render () {
     return (
-      <View style={styles.Container}>
+      <ImageBackground
+        style={styles.banner}
+        source={require('./banner2.jpg')} >
         <Image
-          style={{width: 350, height: 150}}
-          source={{uri: 'http://via.placeholder.com/350x150'}} >
+          style={styles.logo}
+          source={require('./LogoLoyalty1.jpg')} >
         </Image>
-      </View>
+      </ImageBackground>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-})
