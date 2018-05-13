@@ -6,7 +6,7 @@ import styles from './styles'
 export default class Logo extends Component {
   render () {
     return (
-      <View>
+      <View style={styles.container}>
         <Image
           style={styles.logo}
           source={require('./LogoLoyalty1.jpg')} >
