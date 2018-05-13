@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {ScrollView} from 'react-native'
+import { Content } from 'native-base'
 
 import Banner from '../components/Banner'
 import Footer from '../components/Footer'
@@ -14,7 +14,7 @@ import ProfileNav from '../components/ProfileNav'
 export default class ProfileScreen extends React.Component {
   render () {
     return (
-      <ScrollView>
+      <Content>
         <Logo />
         <Banner />
         <Greeting />
@@ -23,7 +23,7 @@ export default class ProfileScreen extends React.Component {
         <VisitCounter />
         <ProfileNav navigation={this.props.navigation}/>
         <Footer />
-      </ ScrollView>
+      </ Content>
     )
   }
 }
