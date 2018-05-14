@@ -2,10 +2,12 @@ import React, {Component} from 'react'
 import {StyleSheet, View, Image} from 'react-native'
 import {connect} from 'react-redux'
 
+import styles from './styles'
+
 class ProfileImg extends Component {
   render () {
     return (
-      <View style={styles.Container}>
+      <View style={styles.container}>
         {this.props.isAuth &&
           <Image
             style={{width: 250, height: 250, borderRadius: 125}}
@@ -15,16 +17,6 @@ class ProfileImg extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 125
-  }
-})
 
 const mapStateToProps = state => {
   return {

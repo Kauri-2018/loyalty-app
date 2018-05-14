@@ -2,24 +2,21 @@ import React, {Component} from 'react'
 import {StyleSheet, View, Text} from 'react-native'
 import {connect} from 'react-redux'
 
+import styles from './styles'
+
 class Greeting extends Component {
   render () {
     return (
       <View style={styles.container}>
-        {this.props.isAuth && <Text> Welcome, {this.props.user.name} </Text>}
+        {this.props.isAuth && 
+        <Text style={styles.text}> 
+        Hi, {this.props.user.name}! 
+        Enter today's passcode below to check in. 
+        </Text>}
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff'
-  }
-})
 
 const mapStateToProps = state => {
   return {

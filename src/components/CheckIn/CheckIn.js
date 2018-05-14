@@ -5,6 +5,8 @@ import t from 'tcomb-form-native'
 
 import {userAppCheckin} from '../../store/actions/checkin'
 
+import styles from './styles'
+
 const Form = t.form.Form
 
 const CheckInForm = t.struct({
@@ -29,20 +31,12 @@ class CheckIn extends Component {
         <Button
           title="Check in"
           onPress={this.handleCheckin}
+          color="#084da8"
         />
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff'
-  }
-})
 
 const mapDispatchToProps = dispatch => {
   return {
