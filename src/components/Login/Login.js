@@ -36,7 +36,7 @@ class Login extends React.Component {
           ref="form"
         />
         <Button
-          color="#191919"
+          color="#084da8"
           title="Log in"
           onPress={this.handleLogin}
         />
