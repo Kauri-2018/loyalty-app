@@ -6,6 +6,8 @@ import t from 'tcomb-form-native'
 
 import {userAppLogin} from '../../store/actions/login'
 
+import styles from './styles'
+
 const Form = t.form.Form
 
 const User = t.struct({
@@ -44,15 +46,6 @@ class Login extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff'
-  }
-})
 
 const mapDispatchToProps = dispatch => {
   return {
