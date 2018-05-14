@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
 import {View, Button, StyleSheet} from 'react-native'
+
 import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
 
 import {userAppLogin} from '../../store/actions/login'
+
+import styles from './styles'
 
 const Form = t.form.Form
 
@@ -28,8 +31,12 @@ class Login extends React.Component {
   render () {
     return (
       <View style={styles.container}>
-        <Form type={User} ref="form" />
+        <Form
+          type={User}
+          ref="form"
+        />
         <Button
+          color="#084da8"
           title="Log in"
           onPress={this.handleLogin}
         />
@@ -37,15 +44,6 @@ class Login extends React.Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff'
-  }
-})
 
 const mapDispatchToProps = dispatch => {
   return {
