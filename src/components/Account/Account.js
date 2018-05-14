@@ -4,16 +4,13 @@ import {connect} from 'react-redux'
 
 import styles from './styles'
 
-// All the props names correspond to PR coming in for web app!
-// Except profile_url which needs to be profilePhoto
-
 class Account extends Component {
   render () {
     return (
       <View
         style={styles.wrapper}>
         <Image
-          source={this.props.user.profile_url}
+          source={this.props.user.profilePhoto}
           style={styles.profilePhoto}
         />
         <Text>Name: {this.props.user.name}</Text>

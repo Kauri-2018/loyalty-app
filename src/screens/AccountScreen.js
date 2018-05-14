@@ -5,10 +5,6 @@ import { View, Button } from 'react-native'
 import Account from '../components/Account'
 
 export default class AccountScreen extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <View>
