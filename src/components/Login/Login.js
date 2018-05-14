@@ -30,15 +30,13 @@ class Login extends React.Component {
   }
   render () {
     return (
-      <View>
+      <View style={styles.container}>
         <Form
-          style={styles.container}
           type={User}
           ref="form"
         />
         <Button
           color="#191919"
-          backgroundColor="#191919"
           title="Log in"
           onPress={this.handleLogin}
         />
