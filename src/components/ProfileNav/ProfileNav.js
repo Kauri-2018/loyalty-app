@@ -8,12 +8,18 @@ class ProfileNav extends Component {
   constructor (props) {
     super(props)
     this.userLogout = this.userLogout.bind(this)
+    this.loadAccount = this.loadAccount.bind(this)
   }
 
   userLogout () {
     this.props.dispatch(logout())
     this.props.navigation.navigate('Home')
   }
+
+  loadAccount () {
+    this.props.navigation.navigate('Account')
+  }
+
   render () {
     return (
       <View>
