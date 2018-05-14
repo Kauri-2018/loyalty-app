@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {View, Button, StyleSheet} from 'react-native'
+
 import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
 
@@ -11,6 +12,15 @@ const User = t.struct({
   username: t.String,
   password: t.String
 })
+
+const options = {
+  fields: {
+    password: {
+      password: true,
+      secureTextEntry: true
+    }
+  }
+}
 
 class Login extends React.Component {
   constructor (props) {
@@ -27,9 +37,15 @@ class Login extends React.Component {
   }
   render () {
     return (
-      <View style={styles.container}>
-        <Form type={User} ref="form" />
+      <View>
+        <Form
+          style={styles.container}
+          type={User}
+          ref="form"
+          option={options}
+        />
         <Button
+          style={{backgroundColor: '#1e1e1e'}}
           title="Log in"
           onPress={this.handleLogin}
         />
