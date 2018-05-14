@@ -45,7 +45,8 @@ class Login extends React.Component {
           option={options}
         />
         <Button
-          style={{backgroundColor: '#1e1e1e'}}
+          color="#191919"
+          backgroundColor="#191919"
           title="Log in"
           onPress={this.handleLogin}
         />
