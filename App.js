@@ -28,8 +28,9 @@ const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     Profile: ProfileScreen
-  },
-  {
+  },{
+  headerMode: 'none',
+  },{
     initialRouteName: 'Home'
   }
 )
