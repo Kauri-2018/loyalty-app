@@ -13,15 +13,6 @@ const User = t.struct({
   password: t.String
 })
 
-const options = {
-  fields: {
-    password: {
-      password: true,
-      secureTextEntry: true
-    }
-  }
-}
-
 class Login extends React.Component {
   constructor (props) {
     super(props)
@@ -42,7 +33,6 @@ class Login extends React.Component {
           style={styles.container}
           type={User}
           ref="form"
-          option={options}
         />
         <Button
           color="#191919"
