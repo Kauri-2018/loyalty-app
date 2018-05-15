@@ -7,10 +7,7 @@ export default StyleSheet.create({
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'flex-end',
-      height: 275,
-      paddingTop: 24,
-      paddingBottom: 15,
-      paddingLeft: 10,
+      padding: 10,
       display: 'flex',
       backgroundColor: '#ffffff'
     },
