@@ -1,17 +1,28 @@
 import React, {Component} from 'react'
-import {View} from 'react-native'
+import {View, Text} from 'react-native'
 import {connect} from 'react-redux'
 
 import styles from './styles'
 
 class History extends Component {
   render () {
+    const {visits, isVisits} = this.props
     return (
       <View styles={styles.wrapper}>
-        <h2>This will be a history component</h2>
+        {isVisits &&
+          visits.map(
+            visit => <Text key={visit.timestamp}>{visit.timestamp}</Text>
+          )}
       </View>
     )
   }
 }
 
-export default connect()(History)
+const mapStateToProps = state => {
+  return {
+    visits: state.auth.visits || [],
+    isVisits: state.auth.isVisits || false
+  }
+}
+
+export default connect(mapStateToProps)(History)

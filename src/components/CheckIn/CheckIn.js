@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
 
 import {userAppCheckin} from '../../store/actions/checkin'
-
 import styles from './styles'
 
 const Form = t.form.Form
@@ -20,8 +19,8 @@ class CheckIn extends Component {
   }
 
   handleCheckin () {
-    const {passcode} = this.refs.form.getValue()
-    this.props.userCheckin(passcode)
+    const {Passcode} = this.refs.form.getValue()
+    this.props.userCheckin(Passcode)
   }
 
   render () {
