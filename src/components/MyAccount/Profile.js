@@ -1,19 +1,42 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
+// import {View, Text} from 'react-native'
+import {Content, Card, CardItem, Text, Body} from 'native-base'
 import {connect} from 'react-redux'
 
 class Profile extends Component {
   render () {
-    const {name, photo_url, email, expiry_date, membership_type, membership_number} = this.props.profile
+    const {name, photo_url, email, membership_type, membership_number} = this.props.profile
     return (
-      <View>
-        <Text>Name: {name}</Text>
-        <Text>Avatar Url: {photo_url}</Text>
-        <Text>Email: {email}</Text>
-        <Text>Expiry Date: {expiry_date}</Text>
-        <Text>Membership Type: {membership_type}</Text>
-        <Text>MemberShip Number: {membership_number}</Text>
-      </View>
+      <Content padder>
+        <Card>
+          <CardItem bordered>
+            <Body>
+              <Text>Name: {name}</Text>
+            </Body>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text>
+                  Email: {email}
+              </Text>
+            </Body>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text>
+                Membership Type: {membership_type}
+              </Text>
+            </Body>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text>
+                MemberShip Number: {membership_number}
+              </Text>
+            </Body>
+          </CardItem>
+        </Card>
+      </Content>
     )
   }
 }

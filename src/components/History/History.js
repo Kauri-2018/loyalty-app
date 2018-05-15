@@ -1,20 +1,25 @@
 import React, {Component} from 'react'
-import {View, Text} from 'react-native'
+import {Content, Card, CardItem, Text, Body} from 'native-base'
 import {connect} from 'react-redux'
 import moment from 'moment'
-
 import styles from './styles'
 
 class History extends Component {
   render () {
     const {visits, isVisits} = this.props
     return (
-      <View styles={styles.wrapper}>
-        {isVisits &&
-          visits.map(
-            visit => <Text key={visit.timestamp}>{moment(visit.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</Text>
-          )}
-      </View>
+      <Content padder>
+        <Card>
+          {isVisits &&
+            visits.map(
+              visit => <CardItem key={visit.timestamp} bordered>
+                <Body>
+                  <Text style={styles.textContent}>{moment(visit.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</Text>
+                </Body>
+              </CardItem>
+            )}
+        </Card>
+      </Content>
     )
   }
 }
