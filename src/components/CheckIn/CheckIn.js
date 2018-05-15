@@ -20,8 +20,8 @@ class CheckIn extends Component {
   }
 
   handleCheckin () {
-    const {passcode} = this.refs.form.getValue()
-    this.props.userCheckin(passcode)
+    const {Passcode} = this.refs.form.getValue()
+    this.props.userCheckin(Passcode)
   }
 
   render () {
