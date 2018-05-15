@@ -18,7 +18,7 @@ class ProfileNav extends Component {
   }
 
   userLogout () {
-    this.props.dispatch(logout())
+    this.props.logout()
     this.props.navigation.navigate('Home')
   }
 
@@ -50,7 +50,8 @@ class ProfileNav extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     getVisitsHistory: () => dispatch(getVisitsHistory()),
-    getAccountInfo: () => dispatch(getAccountInfo())
+    getAccountInfo: () => dispatch(getAccountInfo()),
+    logout: () => dispatch(logout())
   }
 }
 
