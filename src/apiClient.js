@@ -44,3 +44,19 @@ export function checkinUser (passcode) {
           .then(res => res.json())
       })
 }
+
+export function getUserHistory () {
+  return get()
+    .then(
+      token => {
+        return fetch('http://192.168.20.86:3000/api/v1/user/history', {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          }
+        })
+          .then(res => res.json())
+      })
+}

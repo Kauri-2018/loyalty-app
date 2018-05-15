@@ -28,11 +28,11 @@ export function userAppCheckin (passcode) {
     dispatch(requestCheckin())
     return checkinUser(passcode)
       .then(res => {
-        if (!res.count) {
+        if (res.status !== 200) {
           dispatch(checkinError(res.message))
           return Promise.reject(res.message)
         } else {
-          dispatch(receiveCheckin(res.count))
+          dispatch(receiveCheckin(res.body))
         }
       })
       .catch((err) => {

@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import t from 'tcomb-form-native'
 
 import {userAppCheckin} from '../../store/actions/checkin'
-
 import styles from './styles'
 
 const Form = t.form.Form
