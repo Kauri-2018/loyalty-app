@@ -10,5 +10,8 @@ export default StyleSheet.create({
       display: 'flex',
       flexDirection: 'row',
       backgroundColor: '#ffffff'
+    },
+    text: {
+        fontFamily: 'sans-serif-condensed'
     }
   })

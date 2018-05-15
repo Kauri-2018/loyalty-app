@@ -9,6 +9,7 @@ import {userAppLogin} from '../../store/actions/login'
 import styles from './styles'
 
 const Form = t.form.Form
+const options = t.form.Form.stylesheet.
 
 const User = t.struct({
   username: t.String,
@@ -32,11 +33,13 @@ class Login extends React.Component {
     return (
       <View style={styles.container}>
         <Form
+          style={styles.button}
           type={User}
           ref="form"
         />
         <Button
-          color="#084da8"
+          style={styles.button}
+          color="#164c84"
           title="Log in"
           onPress={this.handleLogin}
         />

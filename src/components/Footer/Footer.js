@@ -7,7 +7,7 @@ export default class Banner extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text>
+        <Text style={styles.text}>
           This app is powered by Loyalty.
         </Text>
       </View>
