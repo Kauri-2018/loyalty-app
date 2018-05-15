@@ -6,10 +6,12 @@ export default StyleSheet.create({
     container: {
       flex: 1,
       paddingTop: 24,
-      paddingBottom: 20,
+      paddingBottom: 250,
+      paddingLeft: 10,
       display: 'flex',
       flexDirection: 'row',
-      backgroundColor: '#ffffff'
+      backgroundColor: '#ffffff',
+      justifyContent: 'space-between'
     },
     text: {
         fontFamily: 'sans-serif-condensed'

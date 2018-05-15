@@ -9,7 +9,7 @@ import {userAppLogin} from '../../store/actions/login'
 import styles from './styles'
 
 const Form = t.form.Form
-const options = t.form.Form.stylesheet.
+const options = t.form.Form.stylesheet.fontfamily = 'sans-serif-condensed'
 
 const User = t.struct({
   username: t.String,
