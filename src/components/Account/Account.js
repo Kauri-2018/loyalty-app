@@ -16,7 +16,7 @@ class Account extends Component {
         <Text>Name: {this.props.user.name}</Text>
         <Text>Email: {this.props.user.email}</Text>
         <Text>Loyalty Number: {this.props.user.membershipNumber}</Text>
-        <Text>Loyalty Number: {this.props.user.role}</Text>
+        <Text>Expiry Date: {this.props.user.expiryDate}</Text>
 
       </View>
     )
