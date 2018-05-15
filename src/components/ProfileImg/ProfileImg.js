@@ -11,7 +11,7 @@ class ProfileImg extends Component {
         {this.props.isAuth &&
           <Image
             style={{width: 250, height: 250, borderRadius: 125}}
-            source={{uri: `${this.props.user.profile_url}`}} />
+            source={{uri: `${this.props.user.profilePhoto}`}} />
         }
       </View>
     )

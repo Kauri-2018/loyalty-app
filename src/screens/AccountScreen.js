@@ -10,7 +10,7 @@ export default class AccountScreen extends Component {
       <View>
         <Account />
         <Button
-          navigation={this.props.navigation.navigate('Home')}
+          navigation={this.props.navigation.navigate('Profile')}
           title="Back"
         />
       </View>

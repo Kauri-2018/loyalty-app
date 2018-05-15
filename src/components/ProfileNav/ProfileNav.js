@@ -11,6 +11,7 @@ class ProfileNav extends Component {
   constructor (props) {
     super(props)
     this.userLogout = this.userLogout.bind(this)
+    // this.loadAccount = this.loadAccount.bind(this)
   }
 
   userLogout () {
@@ -18,13 +19,19 @@ class ProfileNav extends Component {
     this.props.navigation.navigate('Home')
   }
 
+  // loadAccount () {
+  //   this.props.navigation.navigate('Account')
+  // }
+
   render () {
     return (
       <Content>
         <Button
           color="#084da8"
           title="My Account"
-          onPress={this.loadAccount}
+          onPress={this.props.isAuth
+            ? this.props.navigation.navigate('Account')
+            : this.userLogout}
         />
         <Button
           color="#084da8"
@@ -41,11 +48,11 @@ class ProfileNav extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     handleLogout: () => dispatch(logout())
-//   }
-// }
+const mapStateToProps = state => {
+  return {
+    isAuth: state.auth.isAuthenticated,
+    user: state.auth.user
+  }
+}
 
-export default connect()(ProfileNav)
-// export default ProfileNav
+export default connect(mapStateToProps)(ProfileNav)
