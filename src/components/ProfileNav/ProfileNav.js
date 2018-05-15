@@ -26,13 +26,13 @@ class ProfileNav extends Component {
     return (
       <View>
         <Button
-          color="#084da8"
+          color="#d90000"
           title="My Account"
           onPress={this.props.getAccountInfo}
         />
         <MyAccount />
         <Button
-          color="#084da8"
+          color="#00d9d9"
           title="Visit History"
           onPress={this.props.getVisitsHistory}
         />

@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
+import styles from './styles'
+
 export default class CheckInStatus extends Component {
   render () {
     return (
@@ -10,13 +12,4 @@ export default class CheckInStatus extends Component {
       </ View>
     )
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    marginTop: 50,
-    padding: 20,
-    backgroundColor: '#ffffff'
-  }
-})
+} 
