@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {StyleSheet, View, Image} from 'react-native'
+import {View, Image} from 'react-native'
 import {connect} from 'react-redux'
 
 import styles from './styles'
