@@ -8,7 +8,7 @@ import {composeWithDevTools} from 'remote-redux-devtools'
 import reducers from './src/store/reducers'
 import HomeScreen from './src/screens/HomeScreen.js'
 import ProfileScreen from './src/screens/ProfileScreen.js'
-// import AccountScreen from './src/screens/AccountScreen'
+import AccountScreen from './src/screens/AccountScreen'
 
 const composeEnhancers = composeWithDevTools({realtime: true})
 const store = createStore(reducers, composeEnhancers(
@@ -28,7 +28,8 @@ export default class App extends React.Component {
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Profile: ProfileScreen
+    Profile: ProfileScreen,
+    Account: AccountScreen
   }, {
     headerMode: 'none'
   }, {
