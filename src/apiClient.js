@@ -1,7 +1,7 @@
 import {get} from './utils/localStorage'
 
 export function loginUser (userDetails) {
-  return fetch('http://192.168.20.86:3000/api/v1/user/login', {
+  return fetch('http://192.168.20.92:3000/api/v1/user/login', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
