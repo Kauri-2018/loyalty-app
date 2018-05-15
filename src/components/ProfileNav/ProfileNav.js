@@ -11,7 +11,8 @@ class ProfileNav extends Component {
   constructor (props) {
     super(props)
     this.userLogout = this.userLogout.bind(this)
-    // this.loadAccount = this.loadAccount.bind(this)
+    this.loadHistory = this.loadHistory.bind(this)
+    this.loadAccount = this.loadAccount.bind(this)
   }
 
   userLogout () {
@@ -19,9 +20,13 @@ class ProfileNav extends Component {
     this.props.navigation.navigate('Home')
   }
 
-  // loadAccount () {
-  //   this.props.navigation.navigate('Account')
-  // }
+  loadAccount () {
+    this.props.navigation.navigate('Account')
+  }
+
+  loadHistory() {
+    
+  }
 
   render () {
     return (
@@ -30,7 +35,7 @@ class ProfileNav extends Component {
           color="#084da8"
           title="My Account"
           onPress={this.props.isAuth
-            ? this.props.navigation.navigate('Account')
+            ? this.loadAccount
             : this.userLogout}
         />
         <Button

@@ -9,10 +9,10 @@ export default class AccountScreen extends Component {
     return (
       <View>
         <Account />
-        <Button
-          navigation={this.props.navigation.navigate('Profile')}
+        {/* <Button
+          onPress={this.props.navigation.navigate('Profile')}
           title="Back"
-        />
+        /> */}
       </View>
     )
   }
