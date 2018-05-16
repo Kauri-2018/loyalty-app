@@ -11,7 +11,6 @@ export default StyleSheet.create({
       backgroundColor: '#ffffff'
     },
     text: {
-        fontFamily: 'sans-serif-condensed',
         color: "#ffffff"
     },
     img: {
