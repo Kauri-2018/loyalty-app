@@ -3,7 +3,12 @@ import {Button} from 'react-native'
 import {Content} from 'native-base'
 import {connect} from 'react-redux'
 
+import History from '../History/index'
+import MyAccount from '../MyAccount/index'
+
 import {logout} from '../../store/actions/logout'
+import {getVisitsHistory} from '../../store/actions/visits'
+import {getAccountInfo} from '../../store/actions/profile'
 
 // import styles from './styles'
 
@@ -11,21 +16,11 @@ class ProfileNav extends Component {
   constructor (props) {
     super(props)
     this.userLogout = this.userLogout.bind(this)
-    this.loadHistory = this.loadHistory.bind(this)
-    this.loadAccount = this.loadAccount.bind(this)
   }
 
   userLogout () {
-    this.props.dispatch(logout())
+    this.props.logout()
     this.props.navigation.navigate('Home')
-  }
-
-  loadAccount () {
-    this.props.navigation.navigate('Account')
-  }
-
-  loadHistory() {
-    
   }
 
   render () {
@@ -34,15 +29,15 @@ class ProfileNav extends Component {
         <Button
           color="#084da8"
           title="My Account"
-          onPress={this.props.isAuth
-            ? this.loadAccount
-            : this.userLogout}
+          onPress={this.props.getAccountInfo}
         />
+        <MyAccount />
         <Button
           color="#084da8"
           title="Visit History"
-          onPress={this.loadHistory}
+          onPress={this.props.getVisitsHistory}
         />
+        <History />
         <Button
           color="#084da8"
           title="Logout"
@@ -53,11 +48,13 @@ class ProfileNav extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapDispatchToProps = dispatch => {
   return {
-    isAuth: state.auth.isAuthenticated,
-    user: state.auth.user
+    getVisitsHistory: () => dispatch(getVisitsHistory()),
+    getAccountInfo: () => dispatch(getAccountInfo()),
+    logout: () => dispatch(logout())
   }
 }
 
-export default connect(mapStateToProps)(ProfileNav)
+export default connect(null, mapDispatchToProps)(ProfileNav)
+// export default ProfileNav
