@@ -4,6 +4,7 @@ import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
   textContent: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'sans-serif-condensed'
   }
 })
