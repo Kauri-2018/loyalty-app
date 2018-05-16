@@ -17,8 +17,7 @@ class ProfileScreen extends React.Component {
     const isCheckedin = this.props.isCheckedin || false
     return (
       <Content contentContainerStyle={{
-        backgroundColor: '#ffffff',
-        flexGrow: 1
+        backgroundColor: '#ffffff'
         }}>
         <Header />
         <Greeting />

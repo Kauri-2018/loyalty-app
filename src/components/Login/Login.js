@@ -6,6 +6,8 @@ import t from 'tcomb-form-native'
 
 import {userAppLogin} from '../../store/actions/login'
 
+import LoginImg from '../LoginImg'
+
 import styles from './styles'
 
 const Form = t.form.Form
@@ -31,12 +33,13 @@ class Login extends React.Component {
   render () {
     return (
       <View style={styles.container}>
+        <LoginImg />
         <Form
           type={User}
           ref="form"
         />
         <Button
-          color="#00d9d9"
+          color="#164c84"
           title="Log in"
           onPress={this.handleLogin}
         />

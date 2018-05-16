@@ -13,6 +13,10 @@ export default class Banner extends Component {
           style={styles.logo}
           source={require('./LogoLoyalty1.jpg')} >
         </Image>
+        <Image
+        style={styles.img}
+        source={require('../../images/maxresdefault.jpg')} >
+      </Image>
       </ImageBackground>
     )
   }
