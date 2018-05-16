@@ -14,7 +14,7 @@ class History extends Component {
             visits.map(
               visit => <CardItem key={visit.timestamp} bordered>
                 <Body>
-                  <Text style={styles.textContent}>{moment(visit.timestamp).format('MMMM Do YYYY, h:mm:ss a')}</Text>
+                  <Text style={styles.textContent}>{moment(visit.timestamp).local().format('MMMM Do YYYY, h:mm:ss a')}</Text>
                 </Body>
               </CardItem>
             )}
