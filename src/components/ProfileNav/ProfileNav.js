@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import {View, Button} from 'react-native'
+import {Button} from 'react-native'
+import {Content} from 'native-base'
 import {connect} from 'react-redux'
 
 import History from '../History/index'
@@ -24,7 +25,7 @@ class ProfileNav extends Component {
 
   render () {
     return (
-      <View>
+      <Content>
         <Button
           color="#084da8"
           title="My Account"
@@ -42,7 +43,7 @@ class ProfileNav extends Component {
           title="Logout"
           onPress={this.userLogout}
         />
-      </View>
+      </Content>
     )
   }
 }
