@@ -9,7 +9,7 @@ export default class ProfileImg extends Component {
         <ImageBackground style={styles.container}>
       <Image
         style={styles.img}
-        source={require('./user-silhouette.png')}>
+        source={require('./id-card.png')}>
       </Image>
       </ImageBackground>
     )

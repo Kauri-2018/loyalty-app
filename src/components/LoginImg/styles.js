@@ -9,7 +9,8 @@ export default StyleSheet.create({
       backgroundColor: '#ffffff',
       width: '100%',
       display: 'flex',
-      flexDirection: 'row'
+      flexDirection: 'row',
+      paddingBottom: 15
     },
     img: {
         alignSelf: 'stretch'

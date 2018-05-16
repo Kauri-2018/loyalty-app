@@ -8,11 +8,13 @@ class Greeting extends Component {
   render () {
     return (
       <View style={styles.container}>
+
         {this.props.isAuth && 
         <Text style={styles.text}> 
         Hi, {this.props.user.name}! 
         Enter today's passcode below to check in. 
         </Text>}
+
       </View>
     )
   }
