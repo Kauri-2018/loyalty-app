@@ -33,7 +33,7 @@ class Profile extends Component {
           <CardItem bordered>
             <Body>
               <Text style={styles.text}>
-                MemberShip Number: {membership_number}
+                Membership Number: {membership_number}
               </Text>
             </Body>
           </CardItem>
