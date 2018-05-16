@@ -8,7 +8,7 @@ export default class CheckInStatus extends Component {
     return (
       <View style={styles.container}>
         <Text p> Succcessfully checked in! </Text>
-        <Text h3> Welcome to the zoo, [username] </Text>
+        <Text h3> Welcome to Enspiral Dev Academy, [username] </Text>
       </ View>
     )
   }
