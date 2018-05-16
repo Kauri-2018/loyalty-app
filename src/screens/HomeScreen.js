@@ -6,6 +6,7 @@ import { Content } from 'native-base'
 import Footer from '../components/Footer'
 import Login from '../components/Login'
 import Header from '../components/Header'
+import LoginImg from '../components/LoginImg'
 
 export default class HomeScreen extends Component {
   render () {
@@ -14,6 +15,7 @@ export default class HomeScreen extends Component {
         flexGrow: 1
       }}>
         <Header />
+        <LoginImg />
         <Login navigation={this.props.navigation} />
         <Footer />
       </ Content>
