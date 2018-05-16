@@ -3,7 +3,8 @@
 import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
-  wrapper: {
-
+  textContent: {
+    textAlign: 'center',
+    fontFamily: 'sans-serif-condensed'
   }
 })

@@ -18,7 +18,7 @@ class ProfileNav extends Component {
   }
 
   userLogout () {
-    this.props.dispatch(logout())
+    this.props.logout()
     this.props.navigation.navigate('Home')
   }
 
@@ -26,13 +26,13 @@ class ProfileNav extends Component {
     return (
       <View>
         <Button
-          color="#084da8"
+          color="#d90000"
           title="My Account"
           onPress={this.props.getAccountInfo}
         />
         <MyAccount />
         <Button
-          color="#084da8"
+          color="#00d9d9"
           title="Visit History"
           onPress={this.props.getVisitsHistory}
         />
@@ -50,7 +50,8 @@ class ProfileNav extends Component {
 const mapDispatchToProps = dispatch => {
   return {
     getVisitsHistory: () => dispatch(getVisitsHistory()),
-    getAccountInfo: () => dispatch(getAccountInfo())
+    getAccountInfo: () => dispatch(getAccountInfo()),
+    logout: () => dispatch(logout())
   }
 }
 

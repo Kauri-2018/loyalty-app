@@ -10,7 +10,9 @@ import Header from '../components/Header'
 export default class HomeScreen extends Component {
   render () {
     return (
-      <Content>
+      <Content contentContainerStyle={{ 
+        flexGrow: 1
+      }}>
         <Header />
         <Login navigation={this.props.navigation} />
         <Footer />

@@ -13,6 +13,7 @@ export default StyleSheet.create({
       backgroundColor: '#ffffff'
     },
     text: {
-      fontSize: 15
+      fontSize: 15,
+      fontFamily: 'sans-serif-condensed'
     }
   })
