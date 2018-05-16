@@ -7,8 +7,5 @@ export default StyleSheet.create({
         padding: 10,
         justifyContent: 'center',
         backgroundColor: '#ffffff'
-    },
-    button: {
-        fontFamily: 'sans-serif-condensed'
     }
   })
