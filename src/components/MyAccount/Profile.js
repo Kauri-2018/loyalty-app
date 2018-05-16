@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import {Content, Card, CardItem, Text, Body} from 'native-base'
 import {connect} from 'react-redux'
 
+import styles from './styles'
+
 class Profile extends Component {
   render () {
     const {name, photo_url, email, membership_type, membership_number} = this.props.profile
@@ -11,27 +13,27 @@ class Profile extends Component {
         <Card>
           <CardItem bordered>
             <Body>
-              <Text>Name: {name}</Text>
+              <Text style={styles.text}>Name: {name}</Text>
             </Body>
           </CardItem>
           <CardItem bordered>
             <Body>
-              <Text>
+              <Text style={styles.text}>
                   Email: {email}
               </Text>
             </Body>
           </CardItem>
           <CardItem bordered>
             <Body>
-              <Text>
+              <Text style={styles.text}>
                 Membership Type: {membership_type}
               </Text>
             </Body>
           </CardItem>
           <CardItem bordered>
             <Body>
-              <Text>
-                MemberShip Number: {membership_number}
+              <Text style={styles.text}>
+                Membership Number: {membership_number}
               </Text>
             </Body>
           </CardItem>

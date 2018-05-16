@@ -9,7 +9,7 @@ class MyAccount extends Component {
   render () {
     const {isAccount} = this.props
     return (
-      <View styles={styles.wrapper}>
+      <View style={styles.wrapper}>
         {isAccount && <Profile />}
       </View>
     )
